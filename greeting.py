@@ -1,2 +1,3 @@
 def greeting(name: str) -> str:
-    return f"Hello, {name or 'friend'}!"
+    display_name = name.strip() or "friend"
+    return f"Hello, {display_name}!"
