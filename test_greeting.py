@@ -9,6 +9,12 @@ class GreetingTests(unittest.TestCase):
     def test_empty_name(self):
         self.assertEqual(greeting(""), "Hello, friend!")
 
+    def test_surrounding_spaces(self):
+        self.assertEqual(greeting("  Avery  "), "Hello, Avery!")
+
+    def test_whitespace_only_name(self):
+        self.assertEqual(greeting("   "), "Hello, friend!")
+
 
 if __name__ == "__main__":
     unittest.main()
